@@ -5,31 +5,32 @@ import OrgCard from '../components/OrgCard.astro';
 import Gallery from '../components/Gallery.astro';
 import MapEmbed from '../components/MapEmbed.astro';
 import ContactForm from '../components/ContactForm.astro';
+import RiverDivider from '../components/RiverDivider.astro';
 
 const organizaciones = (await getCollection('organizaciones')).sort((a, b) => a.data.order - b.data.order);
 
 const historia = [
 	{
+		fecha: '1886–1891',
 		titulo: 'Orígenes',
-		icono: '🌳',
 		texto:
 			'El nombre "Guacanal" nace de los inmensos árboles de guácano que abundaban en la zona y con los que la comunidad identificaba el lugar. La colonización se dio hacia 1886, y su fundación como vereda quedó reconocida el 15 de mayo de 1891. Entre sus primeros habitantes se recuerda a María Josefa, Ramona, Ernesto Sánchez, Lucrecia Sánchez, Damián Paz Molina, Hipólito Saavedra y Bonifacio Molina, entre otros, quienes tomaron posesión de tierras baldías, trazaron callejones y abrieron las primeras vías. Muchas de esas familias fundadoras permanecen en la vereda hasta hoy, generación tras generación.',
 	},
 	{
+		fecha: '1961',
 		titulo: 'Vida y tradición campesina',
-		icono: '🏫',
 		texto:
-			'Ante la falta de un lugar donde los niños de la vereda pudieran estudiar, un grupo de vecinos conformó en 1961 el comité "Pro-Construcción de la Escuela de la Vereda". Gestionaron la donación de un lote —escritura pública No. 259 del 23 de febrero de 1961— y levantaron con trabajo comunitario la Escuela Simón Bolívar, hoy adscrita a la Institución Educativa Jorge Isaacs. En el campo, los cultivos también contaban su propia historia: donde antes se sembraba algodón, maíz, sorgo, soya, plátano y cítricos, hoy predomina la caña de azúcar.',
+			'Ante la falta de un lugar donde los niños de la vereda pudieran estudiar, un grupo de vecinos conformó el comité "Pro-Construcción de la Escuela de la Vereda". Gestionaron la donación de un lote —escritura pública No. 259 del 23 de febrero de 1961— y levantaron con trabajo comunitario la Escuela Simón Bolívar, hoy adscrita a la Institución Educativa Jorge Isaacs. En el campo, los cultivos también contaban su propia historia: donde antes se sembraba algodón, maíz, sorgo, soya, plátano y cítricos, hoy predomina la caña de azúcar.',
 	},
 	{
+		fecha: '1972–1984',
 		titulo: 'Hitos importantes',
-		icono: '📜',
 		texto:
 			'El 19 de mayo de 1972, mediante la Resolución 2040, la Gobernación reconoció la personería jurídica de la Junta de Acción Comunal de la Vereda de Guacanal, con Remigio Saavedra como primer presidente. Bajo ese liderazgo comunitario llegaron dos conquistas que transformaron la vereda: el servicio de energía eléctrica en 1982 y el acueducto veredal en 1984.',
 	},
 	{
+		fecha: 'Hoy',
 		titulo: 'Guacanal hoy',
-		icono: '🌄',
 		texto:
 			'Hoy Guacanal limita con la cabecera municipal de El Cerrito, el municipio de Vijes, Ginebra y Palmira —o, como dicen sus habitantes, entre los ríos Amaime, Zabaletas y Cauca. A 966 metros sobre el nivel del mar, conviven cultivos de aguacate, tomate, plátano, cítricos y maracuyá con una fauna y flora abundante: samanes, guadua, heliconias, torcazas, garzas y armadillos. Y no puede faltar un sabor propio: el dulce manjar blanco que prepara todo el año la señora Aracely Satizabal, reconocido por su elaboración y buen sabor.',
 	},
@@ -37,19 +38,29 @@ const historia = [
 ---
 
 <BaseLayout title="Inicio">
-	<section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-forest-light/15 to-cream">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
-			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-earth">El Cerrito · Valle del Cauca</p>
-			<h1 class="mt-4 font-serif text-4xl sm:text-6xl font-semibold text-forest text-balance">
-				Vereda Guacanal
+	<section id="inicio" class="relative min-h-[92vh] flex items-end overflow-hidden bg-dusk">
+		<img
+			src="/images/galeria/2.jpeg"
+			alt=""
+			aria-hidden="true"
+			class="absolute inset-0 w-full h-full object-cover opacity-70"
+		/>
+		<div class="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/60 to-dusk/10"></div>
+
+		<div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-28 pt-40 w-full">
+			<p class="font-mono text-xs sm:text-sm tracking-[0.2em] text-cane uppercase">
+				3.67917°N · 76.36917°O — San Antonio, El Cerrito, Valle del Cauca
+			</p>
+			<h1 class="mt-4 font-serif italic text-6xl sm:text-8xl text-paper leading-[0.95]">
+				Vereda<br />Guacanal
 			</h1>
-			<p class="mt-6 max-w-2xl mx-auto text-lg text-bark/80">
+			<p class="mt-6 max-w-xl text-lg text-paper/80">
 				Tradición campesina, tierra fértil y comunidad, entre los ríos Amaime, Zabaletas y Cauca.
 			</p>
 			<div class="mt-10">
 				<a
 					href="#historia"
-					class="inline-flex items-center gap-2 rounded-full bg-forest text-cream px-6 py-3 font-medium hover:bg-forest-light transition-colors"
+					class="inline-flex items-center gap-2 rounded-sm bg-cane text-dusk px-6 py-3 font-medium hover:bg-paper transition-colors"
 				>
 					Conoce nuestra historia
 				</a>
@@ -57,38 +68,37 @@ const historia = [
 		</div>
 	</section>
 
-	<section id="historia" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-		<h2 class="font-serif text-3xl font-semibold text-bark text-center">Historia de Guacanal</h2>
-		<p class="mt-3 text-center text-bark/70">De sus orígenes a la vereda que es hoy.</p>
+	<RiverDivider variant="toPaper" />
 
-		<div class="mt-16 space-y-16">
-			{historia.map((bloque, i) => (
-				<div class:list={['flex flex-col sm:flex-row gap-6 items-start', i % 2 === 1 && 'sm:flex-row-reverse']}>
-					<div class="shrink-0 flex h-16 w-16 items-center justify-center rounded-full bg-forest/10 text-3xl">
-						<span aria-hidden="true">{bloque.icono}</span>
-					</div>
-					<div>
-						<h3 class="font-serif text-xl font-semibold text-forest">{bloque.titulo}</h3>
-						<p class="mt-2 text-bark/80 leading-relaxed">{bloque.texto}</p>
-					</div>
+	<section id="historia" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+		<p class="font-mono text-xs tracking-[0.2em] text-rio uppercase">Reseña histórica</p>
+		<h2 class="mt-3 font-serif text-4xl sm:text-5xl text-ink">Historia de Guacanal</h2>
+
+		<div class="mt-16 relative border-l-2 border-rio/25 pl-8 sm:pl-10 space-y-16">
+			{historia.map((bloque) => (
+				<div class="relative">
+					<span class="absolute -left-[2.55rem] sm:-left-[2.85rem] top-1 w-3.5 h-3.5 rounded-full bg-ember ring-4 ring-paper"></span>
+					<p class="font-mono text-xs tracking-[0.15em] text-rio uppercase">{bloque.fecha}</p>
+					<h3 class="mt-2 font-serif text-2xl sm:text-3xl text-ink">{bloque.titulo}</h3>
+					<p class="mt-3 text-ink/75 leading-relaxed">{bloque.texto}</p>
 				</div>
 			))}
 		</div>
 	</section>
 
-	<section id="galeria" class="bg-white border-y border-bark/10 py-20 sm:py-28">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="font-serif text-3xl font-semibold text-bark text-center">Galería de fotos</h2>
-			<p class="mt-3 text-center text-bark/70">El paisaje, los cultivos y la vida comunitaria de Guacanal.</p>
-			<div class="mt-12">
-				<Gallery />
-			</div>
+	<section id="galeria" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+		<p class="font-mono text-xs tracking-[0.2em] text-rio uppercase">Cuaderno de campo</p>
+		<h2 class="mt-3 font-serif text-4xl sm:text-5xl text-ink">Galería de fotos</h2>
+		<p class="mt-3 text-ink/70 max-w-xl">El paisaje, los cultivos y la vida comunitaria de Guacanal.</p>
+		<div class="mt-12">
+			<Gallery />
 		</div>
 	</section>
 
 	<section id="como-llegar" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-		<h2 class="font-serif text-3xl font-semibold text-bark text-center">Cómo llegar</h2>
-		<p class="mt-3 text-center text-bark/70">
+		<p class="font-mono text-xs tracking-[0.2em] text-rio uppercase">Ubicación</p>
+		<h2 class="mt-3 font-serif text-4xl sm:text-5xl text-ink">Cómo llegar</h2>
+		<p class="mt-3 text-ink/70">
 			Guacanal está en el corregimiento de San Antonio, municipio de El Cerrito, Valle del Cauca.
 		</p>
 		<div class="mt-10">
@@ -96,21 +106,25 @@ const historia = [
 		</div>
 	</section>
 
-	<section id="organizaciones" class="bg-white border-y border-bark/10 py-20 sm:py-28">
-		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="font-serif text-3xl font-semibold text-bark text-center">Nuestras organizaciones</h2>
-			<p class="mt-3 text-center text-bark/70">Las comunidades organizadas que dan vida a Guacanal.</p>
-			<div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{organizaciones.map((org) => <OrgCard org={org} />)}
-			</div>
+	<section id="organizaciones" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+		<p class="font-mono text-xs tracking-[0.2em] text-rio uppercase">Registro comunal</p>
+		<h2 class="mt-3 font-serif text-4xl sm:text-5xl text-ink">Nuestras organizaciones</h2>
+		<p class="mt-3 text-ink/70 max-w-xl">Las comunidades organizadas que dan vida a Guacanal.</p>
+		<div class="mt-12 border-t border-ink/10">
+			{organizaciones.map((org, i) => <OrgCard org={org} index={i + 1} />)}
 		</div>
 	</section>
 
-	<section id="contacto" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-		<h2 class="font-serif text-3xl font-semibold text-bark">Contacto</h2>
-		<p class="mt-3 text-bark/70">¿Tienes alguna pregunta o quieres saber más de la vereda? Escríbenos.</p>
-		<div class="mt-10">
-			<ContactForm />
+	<RiverDivider variant="toDusk" />
+
+	<section id="contacto" class="bg-dusk text-paper py-20 sm:py-28">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<p class="font-mono text-xs tracking-[0.2em] text-cane uppercase">Escríbenos</p>
+			<h2 class="mt-3 font-serif text-4xl sm:text-5xl">Contacto</h2>
+			<p class="mt-3 text-paper/70">¿Tienes alguna pregunta o quieres saber más de la vereda? Escríbenos.</p>
+			<div class="mt-10">
+				<ContactForm />
+			</div>
 		</div>
 	</section>
 </BaseLayout>

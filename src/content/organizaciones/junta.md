@@ -4,7 +4,7 @@ tagline: "El corazón organizativo de la vereda desde 1972."
 leaderName: "Francia Elena Salcedo"
 leaderRole: "Presidenta"
 icon: "🤝"
-accent: "forest"
+accent: "ember"
 order: 1
 ---
 

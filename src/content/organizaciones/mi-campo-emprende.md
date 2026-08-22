@@ -4,7 +4,7 @@ tagline: "Asociación de mujeres rurales de Guacanal."
 leaderName: "Virgelina Ramírez"
 leaderRole: "Presidenta"
 icon: "🧺"
-accent: "earth"
+accent: "rio"
 order: 3
 ---
 

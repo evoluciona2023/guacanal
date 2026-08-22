@@ -1,18 +1,18 @@
 ---
 const fotos = [
 	{ src: '/images/galeria/2.jpeg', alt: 'Atardecer sobre las montañas de Guacanal, con cultivos en primer plano' },
-	{ src: '/images/galeria/7.jpeg', alt: 'Flor de borrachero (Brugmansia) en un jardín de la vereda' },
 	{ src: '/images/galeria/9.jpeg', alt: 'Bienparado (potoo) posado en un poste, con platanales de fondo' },
+	{ src: '/images/galeria/7.jpeg', alt: 'Flor de borrachero (Brugmansia) en un jardín de la vereda' },
+	{ src: '/images/galeria/6.jpeg', alt: 'Luna llena sobre el cultivo, junto a una carreta de cosecha' },
 	{ src: '/images/galeria/5.jpeg', alt: 'Gavilán posado entre el follaje' },
 	{ src: '/images/galeria/3.jpeg', alt: 'Pericos en la copa de un árbol' },
-	{ src: '/images/galeria/6.jpeg', alt: 'Luna llena sobre el cultivo, junto a una carreta de cosecha' },
 ];
 ---
 
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="columns-2 sm:columns-3 gap-3 sm:gap-4 [column-fill:balance]">
 	{fotos.map((foto) => (
-		<div class="aspect-square overflow-hidden rounded-2xl border border-bark/10">
-			<img src={foto.src} alt={foto.alt} loading="lazy" class="h-full w-full object-cover" />
+		<div class="mb-3 sm:mb-4 break-inside-avoid overflow-hidden rounded-sm border border-ink/10">
+			<img src={foto.src} alt={foto.alt} loading="lazy" class="w-full h-auto grayscale-[8%] hover:grayscale-0 transition-[filter] duration-500" />
 		</div>
 	))}
 </div>

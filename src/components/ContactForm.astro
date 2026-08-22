@@ -26,7 +26,7 @@ const { defaultSubject = 'General' } = Astro.props;
 			name="nombre"
 			type="text"
 			required
-			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
 		/>
 	</div>
 
@@ -37,7 +37,7 @@ const { defaultSubject = 'General' } = Astro.props;
 			name="correo"
 			type="email"
 			required
-			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
 		/>
 	</div>
 
@@ -46,7 +46,7 @@ const { defaultSubject = 'General' } = Astro.props;
 		<select
 			id="asunto"
 			name="asunto"
-			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
 		>
 			<option selected={defaultSubject === 'General'}>General</option>
 			<option selected={defaultSubject === 'Junta de Acción Comunal'}>Junta de Acción Comunal</option>
@@ -64,13 +64,13 @@ const { defaultSubject = 'General' } = Astro.props;
 			name="mensaje"
 			rows="4"
 			required
-			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
 		></textarea>
 	</div>
 
 	<button
 		type="submit"
-		class="justify-self-start rounded-full bg-forest text-cream px-6 py-2.5 font-medium hover:bg-forest-light transition-colors"
+		class="justify-self-start rounded-sm bg-ink text-paper px-6 py-2.5 font-medium hover:bg-ember transition-colors"
 	>
 		Enviar mensaje
 	</button>

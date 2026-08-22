@@ -6,18 +6,17 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				forest: {
-					DEFAULT: '#2D5016',
-					light: '#4A7043',
-				},
-				earth: '#B8763E',
-				cream: '#F5F0E6',
-				sky: '#7A9E9F',
-				bark: '#3D2E1F',
+				dusk: '#211829',
+				ember: '#E8582F',
+				cane: '#D6A536',
+				rio: '#4F7C90',
+				paper: '#FAF6F0',
+				ink: '#2B2230',
 			},
 			fontFamily: {
-				serif: ['Fraunces', 'Georgia', 'serif'],
-				sans: ['"Work Sans"', 'system-ui', 'sans-serif'],
+				serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+				sans: ['Karla', 'system-ui', 'sans-serif'],
+				mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
 			},
 		},
 	},

@@ -4,7 +4,7 @@ tagline: "Espacio de encuentro para los adultos mayores de Guacanal."
 leaderName: "Nohemy Ramírez Ordóñez"
 leaderRole: "Coordinadora"
 icon: "🌻"
-accent: "sky"
+accent: "cane"
 order: 4
 gallery:
   - src: "/images/organizaciones/tercera-edad/1.jpeg"
