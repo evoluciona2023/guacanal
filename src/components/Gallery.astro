@@ -1,20 +1,18 @@
 ---
-// [PENDIENTE: reemplazar los placeholders por fotos reales de la vereda en /public/images/galeria]
-const placeholders = [
-	{ label: 'Paisaje de Guacanal', emoji: '🌄' },
-	{ label: 'Cultivos de la vereda', emoji: '🌱' },
-	{ label: 'Vida comunitaria', emoji: '🤝' },
-	{ label: 'Cosecha', emoji: '🥑' },
-	{ label: 'Escuela Simón Bolívar', emoji: '🏫' },
-	{ label: 'Fauna y flora', emoji: '🦜' },
+const fotos = [
+	{ src: '/images/galeria/2.jpeg', alt: 'Atardecer sobre las montañas de Guacanal, con cultivos en primer plano' },
+	{ src: '/images/galeria/7.jpeg', alt: 'Flor de borrachero (Brugmansia) en un jardín de la vereda' },
+	{ src: '/images/galeria/9.jpeg', alt: 'Bienparado (potoo) posado en un poste, con platanales de fondo' },
+	{ src: '/images/galeria/5.jpeg', alt: 'Gavilán posado entre el follaje' },
+	{ src: '/images/galeria/3.jpeg', alt: 'Pericos en la copa de un árbol' },
+	{ src: '/images/galeria/6.jpeg', alt: 'Luna llena sobre el cultivo, junto a una carreta de cosecha' },
 ];
 ---
 
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-	{placeholders.map((item) => (
-		<div class="aspect-square rounded-2xl bg-gradient-to-br from-forest-light/20 to-earth/20 flex flex-col items-center justify-center gap-2 border border-bark/10">
-			<span class="text-4xl" aria-hidden="true">{item.emoji}</span>
-			<p class="text-xs text-bark/50 px-2 text-center">{item.label}<br /><span class="italic">[PENDIENTE: foto real]</span></p>
+	{fotos.map((foto) => (
+		<div class="aspect-square overflow-hidden rounded-2xl border border-bark/10">
+			<img src={foto.src} alt={foto.alt} loading="lazy" class="h-full w-full object-cover" />
 		</div>
 	))}
 </div>
