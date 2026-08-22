@@ -6,6 +6,19 @@ leaderRole: "Coordinadora"
 icon: "🌻"
 accent: "sky"
 order: 4
+gallery:
+  - src: "/images/organizaciones/tercera-edad/1.jpeg"
+    alt: "Integrantes del grupo Añoranzas en un encuentro comunitario"
+  - src: "/images/organizaciones/tercera-edad/2.jpeg"
+    alt: "Sesión de activación física al aire libre del grupo Añoranzas"
+  - src: "/images/organizaciones/tercera-edad/3.jpeg"
+    alt: "Celebración decembrina del grupo Añoranzas"
+  - src: "/images/organizaciones/tercera-edad/4.jpeg"
+    alt: "Compartiendo alimentos típicos en la integración navideña"
+  - src: "/images/organizaciones/tercera-edad/7.jpeg"
+    alt: "Encuentro social del grupo Añoranzas"
+  - src: "/images/organizaciones/tercera-edad/8.jpeg"
+    alt: "Juegos recreativos al aire libre"
 ---
 
 ## ¿Qué es el Grupo Añoranzas?
