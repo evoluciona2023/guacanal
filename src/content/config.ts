@@ -11,7 +11,6 @@ const organizaciones = defineCollection({
 		accent: z.enum(['ember', 'cane', 'rio', 'campo']),
 		order: z.number(),
 		visible: z.boolean().default(true),
-		heroImage: z.string().optional(),
 		gallery: z
 			.array(z.object({ src: z.string(), alt: z.string() }))
 			.optional(),

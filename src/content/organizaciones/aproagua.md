@@ -6,7 +6,6 @@ leaderRole: "Presidenta"
 icon: "🥑"
 accent: "campo"
 order: 2
-heroImage: "/images/galeria/9.jpeg"
 ---
 
 ## ¿Qué es Aproagua?

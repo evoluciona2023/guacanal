@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery.astro';
 import MapEmbed from '../components/MapEmbed.astro';
 import ContactForm from '../components/ContactForm.astro';
 import RiverDivider from '../components/RiverDivider.astro';
+import TopoPattern from '../components/TopoPattern.astro';
 
 const organizaciones = (await getCollection('organizaciones', ({ data }) => data.visible)).sort((a, b) => a.data.order - b.data.order);
 
@@ -43,17 +44,12 @@ const historia = [
 
 <BaseLayout title="Inicio">
 	<section id="inicio" class="relative min-h-[92vh] flex items-end overflow-hidden bg-dusk">
-		<img
-			src="/images/galeria/2.jpeg"
-			alt=""
-			aria-hidden="true"
-			class="absolute inset-0 w-full h-full object-cover opacity-70"
-		/>
-		<div class="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/60 to-dusk/10"></div>
+		<TopoPattern tone="mixed" />
+		<div class="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/40 to-transparent"></div>
 
 		<div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 sm:pb-28 pt-40 w-full">
 			<p class="font-mono text-xs sm:text-sm tracking-[0.2em] text-cane uppercase">
-				3.67917°N · 76.36917°O — San Antonio, El Cerrito, Valle del Cauca
+				3.67917°N · 76.36917°O · 966 msnm — San Antonio, El Cerrito, Valle del Cauca
 			</p>
 			<h1 class="mt-4 font-serif italic text-6xl sm:text-8xl text-paper leading-[0.95]">
 				Vereda<br />Guacanal

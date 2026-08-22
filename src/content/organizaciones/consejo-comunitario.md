@@ -6,7 +6,6 @@ leaderRole: "Representante Legal"
 icon: "✊🏾"
 accent: "campo"
 order: 5
-heroImage: "/images/galeria/5.jpeg"
 visible: false
 ---
 

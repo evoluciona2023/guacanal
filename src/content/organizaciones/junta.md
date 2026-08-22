@@ -6,7 +6,6 @@ leaderRole: "Presidenta"
 icon: "🤝"
 accent: "ember"
 order: 1
-heroImage: "/images/galeria/6.jpeg"
 ---
 
 ## ¿Qué es la Junta de Acción Comunal?

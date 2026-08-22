@@ -6,7 +6,6 @@ leaderRole: "Presidenta"
 icon: "🧺"
 accent: "rio"
 order: 3
-heroImage: "/images/galeria/7.jpeg"
 ---
 
 ## ¿Qué es Mi Campo Emprende?
