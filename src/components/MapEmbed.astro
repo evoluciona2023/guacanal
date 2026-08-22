@@ -1,0 +1,17 @@
+---
+const bbox = '-76.39917,3.65917,-76.33917,3.69917';
+const marker = '3.67917,-76.36917';
+const src = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
+---
+
+<div class="overflow-hidden rounded-2xl border border-bark/10 shadow-sm">
+	<iframe
+		title="Mapa de ubicación de la Vereda Guacanal"
+		src={src}
+		class="w-full h-80 sm:h-96"
+		loading="lazy"
+	></iframe>
+</div>
+<p class="mt-2 text-sm text-bark/60">
+	Coordenadas: 3.67917° N, -76.36917° O · Altitud: 966 msnm · Corregimiento de San Antonio, El Cerrito, Valle del Cauca.
+</p>

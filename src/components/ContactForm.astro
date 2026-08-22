@@ -1,0 +1,77 @@
+---
+interface Props {
+	defaultSubject?: string;
+}
+
+const { defaultSubject = 'General' } = Astro.props;
+---
+
+<form
+	name="contacto"
+	method="POST"
+	data-netlify="true"
+	netlify-honeypot="empresa"
+	action="/gracias"
+	class="grid gap-4 max-w-xl"
+>
+	<input type="hidden" name="form-name" value="contacto" />
+	<p class="hidden">
+		<label>No llenar si eres humano: <input name="empresa" /></label>
+	</p>
+
+	<div>
+		<label for="nombre" class="block text-sm font-medium mb-1">Nombre</label>
+		<input
+			id="nombre"
+			name="nombre"
+			type="text"
+			required
+			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+		/>
+	</div>
+
+	<div>
+		<label for="correo" class="block text-sm font-medium mb-1">Correo</label>
+		<input
+			id="correo"
+			name="correo"
+			type="email"
+			required
+			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+		/>
+	</div>
+
+	<div>
+		<label for="asunto" class="block text-sm font-medium mb-1">Asunto</label>
+		<select
+			id="asunto"
+			name="asunto"
+			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+		>
+			<option selected={defaultSubject === 'General'}>General</option>
+			<option selected={defaultSubject === 'Junta de Acción Comunal'}>Junta de Acción Comunal</option>
+			<option selected={defaultSubject === 'Aproagua'}>Aproagua</option>
+			<option selected={defaultSubject === 'Mi Campo Emprende'}>Mi Campo Emprende</option>
+			<option selected={defaultSubject === 'Grupo de la Tercera Edad Añoranzas'}>Grupo de la Tercera Edad Añoranzas</option>
+			<option selected={defaultSubject === 'Consejo Comunitario Afroguacanal'}>Consejo Comunitario Afroguacanal</option>
+		</select>
+	</div>
+
+	<div>
+		<label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
+		<textarea
+			id="mensaje"
+			name="mensaje"
+			rows="4"
+			required
+			class="w-full rounded-lg border border-bark/20 bg-white px-4 py-2.5 text-bark focus:border-forest focus:ring-1 focus:ring-forest outline-none"
+		></textarea>
+	</div>
+
+	<button
+		type="submit"
+		class="justify-self-start rounded-full bg-forest text-cream px-6 py-2.5 font-medium hover:bg-forest-light transition-colors"
+	>
+		Enviar mensaje
+	</button>
+</form>

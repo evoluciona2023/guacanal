@@ -1,0 +1,20 @@
+---
+// [PENDIENTE: reemplazar los placeholders por fotos reales de la vereda en /public/images/galeria]
+const placeholders = [
+	{ label: 'Paisaje de Guacanal', emoji: '🌄' },
+	{ label: 'Cultivos de la vereda', emoji: '🌱' },
+	{ label: 'Vida comunitaria', emoji: '🤝' },
+	{ label: 'Cosecha', emoji: '🥑' },
+	{ label: 'Escuela Simón Bolívar', emoji: '🏫' },
+	{ label: 'Fauna y flora', emoji: '🦜' },
+];
+---
+
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+	{placeholders.map((item) => (
+		<div class="aspect-square rounded-2xl bg-gradient-to-br from-forest-light/20 to-earth/20 flex flex-col items-center justify-center gap-2 border border-bark/10">
+			<span class="text-4xl" aria-hidden="true">{item.emoji}</span>
+			<p class="text-xs text-bark/50 px-2 text-center">{item.label}<br /><span class="italic">[PENDIENTE: foto real]</span></p>
+		</div>
+	))}
+</div>

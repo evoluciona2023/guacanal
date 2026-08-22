@@ -1,0 +1,12 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import OrgPage from '../components/OrgPage.astro';
+
+const entry = await getEntry('organizaciones', 'mi-campo-emprende');
+if (!entry) throw new Error('Entrada "mi-campo-emprende" no encontrada en la colección organizaciones');
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.tagline}>
+	<OrgPage entry={entry} />
+</BaseLayout>
