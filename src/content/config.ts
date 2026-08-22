@@ -10,6 +10,9 @@ const organizaciones = defineCollection({
 		icon: z.string(),
 		accent: z.enum(['forest', 'earth', 'sky']),
 		order: z.number(),
+		gallery: z
+			.array(z.object({ src: z.string(), alt: z.string() }))
+			.optional(),
 	}),
 });
 

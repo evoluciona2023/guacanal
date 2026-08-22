@@ -10,9 +10,13 @@ order: 4
 
 ## ¿Qué es el Grupo Añoranzas?
 
-Añoranzas es el grupo que reúne a los adultos mayores de la vereda Guacanal, un espacio de encuentro, memoria y comunidad.
+Añoranzas es el grupo que reúne a los adultos mayores de la vereda Guacanal, un espacio de encuentro, integración y salud bajo el lema **"Integración y salud"**.
 
-*[PENDIENTE: describir el propósito y actividades del grupo.]*
+**Misión:** contribuir al bienestar, la salud y el apoyo de un mejor entorno a la población del adulto mayor y su familia, fortaleciendo una mejor manera de vivir esta etapa de la vida.
+
+**Visión:** unir, agrupar y compartir con el adulto mayor es reconocer en ellos una fuente de experiencia, sabiduría y gratitud para todos los integrantes del grupo Añoranzas de la vereda Guacanal.
+
+**Valores:** trabajo en equipo, solidaridad, amistad, reír, ser feliz y vivir plenamente.
 
 ## Historia y logros
 
@@ -20,7 +24,10 @@ Añoranzas es el grupo que reúne a los adultos mayores de la vereda Guacanal, u
 
 ## Actividades y proyectos
 
-*[PENDIENTE: agregar las actividades recreativas, culturales o de bienestar que realiza el grupo.]*
+- Encuentros periódicos de ejercicio y activación física al aire libre
+- Juegos y actividades recreativas en grupo
+- Celebraciones e integraciones comunitarias, como las fiestas decembrinas
+- Espacios de encuentro que fortalecen la amistad y el bienestar de los adultos mayores de la vereda
 
 ## Cómo participar
 
