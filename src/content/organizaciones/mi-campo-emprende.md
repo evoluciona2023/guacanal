@@ -4,7 +4,8 @@ tagline: "Asociación de mujeres rurales de Guacanal."
 leaderName: "Virgelina Ramírez"
 leaderRole: "Presidenta"
 icon: "🧺"
-accent: "rio"
+accent: "green"
+banner: "/images/banners/Mi campo emprende.png"
 order: 3
 ---
 
@@ -15,6 +16,8 @@ Mi Campo Emprende es la asociación de mujeres rurales de la vereda Guacanal.
 *[PENDIENTE: describir el propósito, objetivos y enfoque de la asociación.]*
 
 ## Historia y logros
+
+Mi Campo Emprende fue creada el 22 de julio de 2020.
 
 *[PENDIENTE: agregar cómo se conformó la asociación y sus hitos.]*
 

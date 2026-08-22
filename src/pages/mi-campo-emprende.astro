@@ -7,6 +7,6 @@ const entry = await getEntry('organizaciones', 'mi-campo-emprende');
 if (!entry) throw new Error('Entrada "mi-campo-emprende" no encontrada en la colección organizaciones');
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.tagline}>
+<BaseLayout title={entry.data.title} description={entry.data.tagline} accent={entry.data.accent}>
 	<OrgPage entry={entry} />
 </BaseLayout>

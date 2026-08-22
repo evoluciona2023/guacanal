@@ -4,7 +4,8 @@ tagline: "Espacio de encuentro para los adultos mayores de Guacanal."
 leaderName: "Nohemy Ramírez Ordóñez"
 leaderRole: "Coordinadora"
 icon: "🌻"
-accent: "cane"
+accent: "purple"
+banner: "/images/banners/Grupo tercera edad.png"
 order: 4
 gallery:
   - src: "/images/organizaciones/tercera-edad/1.jpeg"
@@ -33,14 +34,28 @@ Añoranzas es el grupo que reúne a los adultos mayores de la vereda Guacanal, u
 
 ## Historia y logros
 
-*[PENDIENTE: agregar cómo se conformó el grupo y sus hitos.]*
+El grupo nació en 2016, impulsado por la necesidad de dedicar un espacio de esparcimiento, integración y ejercicio a las personas mayores de la vereda. Comenzó con adultos y jóvenes dispuestos a colaborar y apoyar un mejor proceso de envejecimiento para los habitantes mayores de la región.
+
+Se legalizó ante el municipio de El Cerrito, lo que permitió gestionar el apoyo de monitores deportivos, acompañamiento psicológico, actividades de recreación y visitas de la Secretaría de Salud. El objetivo ha sido siempre el mismo: que las personas mayores de Guacanal tengan un espacio donde integrarse, participar y mejorar su salud mental, con el respaldo de profesionales, sus gobernantes, y la sonrisa, el abrazo y el saludo de sus compañeros en cada tarde de encuentro.
 
 ## Actividades y proyectos
 
-- Encuentros periódicos de ejercicio y activación física al aire libre
-- Juegos y actividades recreativas en grupo
-- Celebraciones e integraciones comunitarias, como las fiestas decembrinas
-- Espacios de encuentro que fortalecen la amistad y el bienestar de los adultos mayores de la vereda
+- Encuentros todas las tardes en la caseta comunal de la vereda
+- Activación física y ejercicio con monitores deportivos
+- Acompañamiento psicológico y visitas de la Secretaría de Salud
+- Actividades recreativas y de integración
+- Celebraciones comunitarias, como las fiestas decembrinas
+- Próximo proyecto: un viaje a Cartagena
+
+## Junta directiva
+
+*[PENDIENTE: confirmar quién ocupa la coordinación — la reseña histórica de la vereda registra a Nohemy Ramírez Ordóñez como Coordinadora; información más reciente indica a Alba Nidia Saavedra Cuero. Mientras se confirma, se listan ambos roles.]*
+
+- Coordinadora: Alba Nidia Saavedra Cuero
+- Vicecoordinadora: Nohemy Ramírez Ordóñez
+- Secretaria: Patricia Molina
+- Fiscal: Carmen Tulia Arango
+- Tesorera: Dolores Cecilia Paz Arango
 
 ## Cómo participar
 

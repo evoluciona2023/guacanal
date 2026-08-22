@@ -4,7 +4,8 @@ tagline: "Asociación de Productores Agropecuarios del Guacanal."
 leaderName: "Claudia Isabel Paz Caicedo"
 leaderRole: "Presidenta"
 icon: "🥑"
-accent: "campo"
+accent: "green"
+banner: "/images/banners/Aproagua.png"
 order: 2
 ---
 

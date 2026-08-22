@@ -3,8 +3,6 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import ContactForm from './ContactForm.astro';
 import OrgIcon from './OrgIcon.astro';
-import RiverDivider from './RiverDivider.astro';
-import TopoPattern from './TopoPattern.astro';
 
 interface Props {
 	entry: CollectionEntry<'organizaciones'>;
@@ -17,57 +15,32 @@ const otras = (await getCollection('organizaciones'))
 	.filter((org) => org.slug !== entry.slug && org.data.visible)
 	.sort((a, b) => a.data.order - b.data.order);
 
-const accentText: Record<string, string> = {
-	ember: 'text-ember',
-	cane: 'text-cane',
-	rio: 'text-rio',
-	campo: 'text-campo',
-};
-const accentBg: Record<string, string> = {
-	ember: 'bg-ember/15',
-	cane: 'bg-cane/15',
-	rio: 'bg-rio/15',
-	campo: 'bg-campo/20',
-};
-const accentBorder: Record<string, string> = {
-	ember: 'border-ember',
-	cane: 'border-cane',
-	rio: 'border-rio',
-	campo: 'border-campo',
-};
+const accentText: Record<string, string> = { green: 'text-green', navy: 'text-navy', purple: 'text-purple' };
+const accentBorder: Record<string, string> = { green: 'border-green', navy: 'border-navy', purple: 'border-purple' };
 const accentProseHeadings: Record<string, string> = {
-	ember: 'prose-headings:text-ember',
-	cane: 'prose-headings:text-cane',
-	rio: 'prose-headings:text-rio',
-	campo: 'prose-headings:text-campo',
+	green: 'prose-headings:text-green',
+	navy: 'prose-headings:text-navy',
+	purple: 'prose-headings:text-purple',
 };
 ---
 
-<section class="relative min-h-[60vh] flex items-end overflow-hidden bg-dusk text-paper">
-	<TopoPattern tone={entry.data.accent} />
-	<div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 sm:pb-20 w-full">
-		<span class:list={['inline-flex h-14 w-14 items-center justify-center rounded-full', accentBg[entry.data.accent]]}>
-			<OrgIcon slug={entry.slug} class:list={['w-7 h-7', accentText[entry.data.accent]]} />
-		</span>
-		<p class="mt-6 font-mono text-xs tracking-[0.2em] text-paper/60 uppercase">Organización comunitaria</p>
-		<h1 class="mt-2 font-serif italic text-5xl sm:text-6xl">{entry.data.title}</h1>
-		<p class="mt-4 text-lg text-paper/80 max-w-xl">{entry.data.tagline}</p>
-	</div>
+<section>
+	{entry.data.banner && (
+		<img src={entry.data.banner} alt={`${entry.data.title} — ${entry.data.tagline}`} class="w-full h-auto" />
+	)}
 </section>
-
-<RiverDivider variant="toPaper" />
 
 <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 	<div class:list={['mb-12 flex items-center gap-4 border-l-2 pl-5 py-1', accentBorder[entry.data.accent]]}>
 		<div>
-			<p class="font-mono text-xs tracking-[0.15em] text-ink/50 uppercase">{entry.data.leaderRole}</p>
-			<p class="font-serif text-2xl text-ink">{entry.data.leaderName}</p>
+			<p class="text-xs font-semibold tracking-[0.1em] text-ink/50 uppercase">{entry.data.leaderRole}</p>
+			<p class="font-display font-semibold text-xl text-ink">{entry.data.leaderName}</p>
 		</div>
 	</div>
 
 	<article
 		class:list={[
-			'prose prose-headings:font-serif max-w-none prose-p:text-ink/80 prose-li:text-ink/80 prose-strong:text-ink',
+			'prose prose-headings:font-display prose-headings:font-semibold max-w-none prose-p:text-ink/80 prose-li:text-ink/80 prose-strong:text-ink',
 			accentProseHeadings[entry.data.accent],
 			'prose-a:text-ink prose-a:underline',
 		]}
@@ -77,11 +50,11 @@ const accentProseHeadings: Record<string, string> = {
 
 	{entry.data.gallery && entry.data.gallery.length > 0 && (
 		<div class="mt-16">
-			<p class="font-mono text-xs tracking-[0.2em] text-campo uppercase">Cuaderno de campo</p>
-			<h2 class="mt-2 font-serif text-2xl text-ink">Momentos del grupo</h2>
+			<p class:list={['text-xs font-semibold tracking-[0.15em] uppercase', accentText[entry.data.accent]]}>Cuaderno de campo</p>
+			<h2 class="mt-2 font-display font-bold text-xl text-ink">Momentos del grupo</h2>
 			<div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
 				{entry.data.gallery.map((foto) => (
-					<div class="aspect-square overflow-hidden rounded-sm border border-ink/10">
+					<div class="aspect-square overflow-hidden rounded-md border border-ink/10">
 						<img src={foto.src} alt={foto.alt} loading="lazy" class="h-full w-full object-cover" />
 					</div>
 				))}
@@ -90,19 +63,19 @@ const accentProseHeadings: Record<string, string> = {
 	)}
 
 	<div class="mt-16 pt-8 border-t border-ink/10">
-		<p class="font-mono text-xs tracking-[0.15em] text-ink/40 uppercase">Otras organizaciones</p>
+		<p class="text-xs font-semibold tracking-[0.1em] text-ink/40 uppercase">Otras organizaciones</p>
 		<div class="mt-4 flex flex-wrap gap-3">
 			{otras.map((org) => (
 				<a
 					href={`/${org.slug}`}
-					class="inline-flex items-center gap-2 rounded-sm border border-ink/15 bg-white px-4 py-2 text-sm hover:border-ink transition-colors"
+					class="inline-flex items-center gap-2 rounded-md border border-ink/15 bg-white px-4 py-2 text-sm font-medium hover:border-ink transition-colors"
 				>
 					<OrgIcon slug={org.slug} class="w-4 h-4" />{org.data.title}
 				</a>
 			))}
 			<a
 				href="/"
-				class="inline-flex items-center gap-2 rounded-sm px-4 py-2 text-sm text-ink/60 hover:text-ink transition-colors"
+				class="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm text-ink/60 hover:text-ink transition-colors"
 			>
 				← Volver al inicio
 			</a>
@@ -110,15 +83,13 @@ const accentProseHeadings: Record<string, string> = {
 	</div>
 </section>
 
-<RiverDivider variant="toDusk" />
-
-<section id="contacto" class="bg-dusk text-paper py-20">
+<section id="contacto" class="bg-white border-t border-ink/10 py-16">
 	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-		<p class="font-mono text-xs tracking-[0.2em] text-cane uppercase">Escríbenos</p>
-		<h2 class="mt-2 font-serif text-3xl">Contacto</h2>
-		<p class="mt-2 text-paper/70">Tu mensaje llegará marcado para {entry.data.title}.</p>
+		<p class:list={['text-xs font-semibold tracking-[0.15em] uppercase', accentText[entry.data.accent]]}>Escríbenos</p>
+		<h2 class="mt-2 font-display font-bold text-2xl text-ink">Contacto</h2>
+		<p class="mt-2 text-ink/70">Tu mensaje llegará marcado para {entry.data.title}.</p>
 		<div class="mt-8">
-			<ContactForm defaultSubject={entry.data.title} />
+			<ContactForm defaultSubject={entry.data.title} accent={entry.data.accent} />
 		</div>
 	</div>
 </section>

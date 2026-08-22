@@ -7,6 +7,6 @@ const entry = await getEntry('organizaciones', 'tercera-edad');
 if (!entry) throw new Error('Entrada "tercera-edad" no encontrada en la colección organizaciones');
 ---
 
-<BaseLayout title={entry.data.title} description={entry.data.tagline}>
+<BaseLayout title={entry.data.title} description={entry.data.tagline} accent={entry.data.accent}>
 	<OrgPage entry={entry} />
 </BaseLayout>

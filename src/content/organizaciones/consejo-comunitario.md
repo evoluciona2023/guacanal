@@ -4,7 +4,7 @@ tagline: "Representación de la comunidad afrodescendiente de la vereda."
 leaderName: "Sandra Liliana Montenegro"
 leaderRole: "Representante Legal"
 icon: "✊🏾"
-accent: "campo"
+accent: "green"
 order: 5
 visible: false
 ---

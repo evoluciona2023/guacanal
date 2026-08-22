@@ -11,8 +11,8 @@ const fotos = [
 
 <div class="columns-2 sm:columns-3 gap-3 sm:gap-4 [column-fill:balance]">
 	{fotos.map((foto) => (
-		<div class="mb-3 sm:mb-4 break-inside-avoid overflow-hidden rounded-sm border border-ink/10">
-			<img src={foto.src} alt={foto.alt} loading="lazy" class="w-full h-auto grayscale-[8%] hover:grayscale-0 transition-[filter] duration-500" />
+		<div class="mb-3 sm:mb-4 break-inside-avoid overflow-hidden rounded-md border border-ink/10">
+			<img src={foto.src} alt={foto.alt} loading="lazy" class="w-full h-auto" />
 		</div>
 	))}
 </div>

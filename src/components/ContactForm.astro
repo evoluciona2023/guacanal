@@ -3,15 +3,28 @@ import { getCollection } from 'astro:content';
 
 interface Props {
 	defaultSubject?: string;
+	accent?: 'green' | 'navy' | 'purple';
 }
 
-const { defaultSubject = 'General' } = Astro.props;
+const { defaultSubject = 'General', accent = 'green' } = Astro.props;
 
 const visibleOrgs = (await getCollection('organizaciones', ({ data }) => data.visible)).sort(
 	(a, b) => a.data.order - b.data.order,
 );
 const subjects = ['General', ...visibleOrgs.map((org) => org.data.title)];
 if (!subjects.includes(defaultSubject)) subjects.push(defaultSubject);
+
+const focusRing: Record<string, string> = {
+	green: 'focus:border-green focus:ring-green',
+	navy: 'focus:border-navy focus:ring-navy',
+	purple: 'focus:border-purple focus:ring-purple',
+};
+const buttonBg: Record<string, string> = {
+	green: 'bg-green hover:bg-green/90',
+	navy: 'bg-navy hover:bg-navy/90',
+	purple: 'bg-purple hover:bg-purple/90',
+};
+const fieldClass = `w-full rounded-md border border-ink/20 bg-white px-4 py-2.5 text-ink focus:ring-1 outline-none ${focusRing[accent]}`;
 ---
 
 <form
@@ -29,33 +42,17 @@ if (!subjects.includes(defaultSubject)) subjects.push(defaultSubject);
 
 	<div>
 		<label for="nombre" class="block text-sm font-medium mb-1">Nombre</label>
-		<input
-			id="nombre"
-			name="nombre"
-			type="text"
-			required
-			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
-		/>
+		<input id="nombre" name="nombre" type="text" required class={fieldClass} />
 	</div>
 
 	<div>
 		<label for="correo" class="block text-sm font-medium mb-1">Correo</label>
-		<input
-			id="correo"
-			name="correo"
-			type="email"
-			required
-			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
-		/>
+		<input id="correo" name="correo" type="email" required class={fieldClass} />
 	</div>
 
 	<div>
 		<label for="asunto" class="block text-sm font-medium mb-1">Asunto</label>
-		<select
-			id="asunto"
-			name="asunto"
-			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
-		>
+		<select id="asunto" name="asunto" class={fieldClass}>
 			{subjects.map((subject) => (
 				<option selected={defaultSubject === subject}>{subject}</option>
 			))}
@@ -64,18 +61,12 @@ if (!subjects.includes(defaultSubject)) subjects.push(defaultSubject);
 
 	<div>
 		<label for="mensaje" class="block text-sm font-medium mb-1">Mensaje</label>
-		<textarea
-			id="mensaje"
-			name="mensaje"
-			rows="4"
-			required
-			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
-		></textarea>
+		<textarea id="mensaje" name="mensaje" rows="4" required class={fieldClass}></textarea>
 	</div>
 
 	<button
 		type="submit"
-		class="justify-self-start rounded-sm bg-ink text-paper px-6 py-2.5 font-medium hover:bg-ember transition-colors"
+		class:list={['justify-self-start rounded-md text-white px-6 py-2.5 font-semibold transition-colors', buttonBg[accent]]}
 	>
 		Enviar mensaje
 	</button>

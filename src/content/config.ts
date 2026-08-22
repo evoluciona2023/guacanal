@@ -8,7 +8,8 @@ const organizaciones = defineCollection({
 		leaderName: z.string(),
 		leaderRole: z.string(),
 		icon: z.string(),
-		accent: z.enum(['ember', 'cane', 'rio', 'campo']),
+		accent: z.enum(['green', 'navy', 'purple']),
+		banner: z.string().optional(),
 		order: z.number(),
 		visible: z.boolean().default(true),
 		gallery: z
