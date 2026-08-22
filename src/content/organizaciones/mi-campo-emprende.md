@@ -11,7 +11,7 @@ order: 3
 
 ## ¿Qué es Mi Campo Emprende?
 
-Mi Campo Emprende es la asociación de mujeres rurales de la vereda Guacanal.
+Mi Campo Emprende es la asociación de mujeres rurales de la vereda Guacanal, una entidad sin ánimo de lucro. Todas sus asociadas son domiciliarias en la vereda Guacanal, El Cerrito, Valle del Cauca.
 
 *[PENDIENTE: describir el propósito, objetivos y enfoque de la asociación.]*
 
