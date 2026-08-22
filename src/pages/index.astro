@@ -13,24 +13,28 @@ const historia = [
 	{
 		fecha: '1886–1891',
 		titulo: 'Orígenes',
+		dot: 'ember',
 		texto:
 			'El nombre "Guacanal" nace de los inmensos árboles de guácano que abundaban en la zona y con los que la comunidad identificaba el lugar. La colonización se dio hacia 1886, y su fundación como vereda quedó reconocida el 15 de mayo de 1891. Entre sus primeros habitantes se recuerda a María Josefa, Ramona, Ernesto Sánchez, Lucrecia Sánchez, Damián Paz Molina, Hipólito Saavedra y Bonifacio Molina, entre otros, quienes tomaron posesión de tierras baldías, trazaron callejones y abrieron las primeras vías. Muchas de esas familias fundadoras permanecen en la vereda hasta hoy, generación tras generación.',
 	},
 	{
 		fecha: '1961',
 		titulo: 'Vida y tradición campesina',
+		dot: 'campo',
 		texto:
 			'Ante la falta de un lugar donde los niños de la vereda pudieran estudiar, un grupo de vecinos conformó el comité "Pro-Construcción de la Escuela de la Vereda". Gestionaron la donación de un lote —escritura pública No. 259 del 23 de febrero de 1961— y levantaron con trabajo comunitario la Escuela Simón Bolívar, hoy adscrita a la Institución Educativa Jorge Isaacs. En el campo, los cultivos también contaban su propia historia: donde antes se sembraba algodón, maíz, sorgo, soya, plátano y cítricos, hoy predomina la caña de azúcar.',
 	},
 	{
 		fecha: '1972–1984',
 		titulo: 'Hitos importantes',
+		dot: 'ember',
 		texto:
 			'El 19 de mayo de 1972, mediante la Resolución 2040, la Gobernación reconoció la personería jurídica de la Junta de Acción Comunal de la Vereda de Guacanal, con Remigio Saavedra como primer presidente. Bajo ese liderazgo comunitario llegaron dos conquistas que transformaron la vereda: el servicio de energía eléctrica en 1982 y el acueducto veredal en 1984.',
 	},
 	{
 		fecha: 'Hoy',
 		titulo: 'Guacanal hoy',
+		dot: 'campo',
 		texto:
 			'Hoy Guacanal limita con la cabecera municipal de El Cerrito, el municipio de Vijes, Ginebra y Palmira —o, como dicen sus habitantes, entre los ríos Amaime, Zabaletas y Cauca. A 966 metros sobre el nivel del mar, conviven cultivos de aguacate, tomate, plátano, cítricos y maracuyá con una fauna y flora abundante: samanes, guadua, heliconias, torcazas, garzas y armadillos. Y no puede faltar un sabor propio: el dulce manjar blanco que prepara todo el año la señora Aracely Satizabal, reconocido por su elaboración y buen sabor.',
 	},
@@ -77,7 +81,7 @@ const historia = [
 		<div class="mt-16 relative border-l-2 border-rio/25 pl-8 sm:pl-10 space-y-16">
 			{historia.map((bloque) => (
 				<div class="relative">
-					<span class="absolute -left-[2.55rem] sm:-left-[2.85rem] top-1 w-3.5 h-3.5 rounded-full bg-ember ring-4 ring-paper"></span>
+					<span class:list={['absolute -left-[2.55rem] sm:-left-[2.85rem] top-1 w-3.5 h-3.5 rounded-full ring-4 ring-paper', bloque.dot === 'campo' ? 'bg-campo' : 'bg-ember']}></span>
 					<p class="font-mono text-xs tracking-[0.15em] text-rio uppercase">{bloque.fecha}</p>
 					<h3 class="mt-2 font-serif text-2xl sm:text-3xl text-ink">{bloque.titulo}</h3>
 					<p class="mt-3 text-ink/75 leading-relaxed">{bloque.texto}</p>
@@ -87,7 +91,7 @@ const historia = [
 	</section>
 
 	<section id="galeria" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-		<p class="font-mono text-xs tracking-[0.2em] text-rio uppercase">Cuaderno de campo</p>
+		<p class="font-mono text-xs tracking-[0.2em] text-campo uppercase">Cuaderno de campo</p>
 		<h2 class="mt-3 font-serif text-4xl sm:text-5xl text-ink">Galería de fotos</h2>
 		<p class="mt-3 text-ink/70 max-w-xl">El paisaje, los cultivos y la vida comunitaria de Guacanal.</p>
 		<div class="mt-12">
@@ -96,7 +100,7 @@ const historia = [
 	</section>
 
 	<section id="como-llegar" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-		<p class="font-mono text-xs tracking-[0.2em] text-rio uppercase">Ubicación</p>
+		<p class="font-mono text-xs tracking-[0.2em] text-campo uppercase">Ubicación</p>
 		<h2 class="mt-3 font-serif text-4xl sm:text-5xl text-ink">Cómo llegar</h2>
 		<p class="mt-3 text-ink/70">
 			Guacanal está en el corregimiento de San Antonio, municipio de El Cerrito, Valle del Cauca.

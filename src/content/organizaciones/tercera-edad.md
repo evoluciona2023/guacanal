@@ -6,6 +6,7 @@ leaderRole: "Coordinadora"
 icon: "🌻"
 accent: "cane"
 order: 4
+heroImage: "/images/organizaciones/tercera-edad/2.jpeg"
 gallery:
   - src: "/images/organizaciones/tercera-edad/1.jpeg"
     alt: "Integrantes del grupo Añoranzas en un encuentro comunitario"

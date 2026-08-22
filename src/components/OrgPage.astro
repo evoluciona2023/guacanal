@@ -20,32 +20,47 @@ const accentText: Record<string, string> = {
 	ember: 'text-ember',
 	cane: 'text-cane',
 	rio: 'text-rio',
+	campo: 'text-campo',
 };
 const accentBg: Record<string, string> = {
 	ember: 'bg-ember/15',
 	cane: 'bg-cane/15',
 	rio: 'bg-rio/15',
+	campo: 'bg-campo/20',
 };
 const accentBorder: Record<string, string> = {
 	ember: 'border-ember',
 	cane: 'border-cane',
 	rio: 'border-rio',
+	campo: 'border-campo',
 };
 const accentProseHeadings: Record<string, string> = {
 	ember: 'prose-headings:text-ember',
 	cane: 'prose-headings:text-cane',
 	rio: 'prose-headings:text-rio',
+	campo: 'prose-headings:text-campo',
 };
 ---
 
-<section class="bg-dusk text-paper py-24 sm:py-32">
-	<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="relative min-h-[70vh] flex items-end overflow-hidden bg-dusk text-paper">
+	{entry.data.heroImage && (
+		<>
+			<img
+				src={entry.data.heroImage}
+				alt=""
+				aria-hidden="true"
+				class="absolute inset-0 w-full h-full object-cover opacity-90"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-t from-dusk via-dusk/55 to-dusk/10"></div>
+		</>
+	)}
+	<div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 sm:pb-20 w-full">
 		<span class:list={['inline-flex h-14 w-14 items-center justify-center rounded-full', accentBg[entry.data.accent]]}>
 			<OrgIcon slug={entry.slug} class:list={['w-7 h-7', accentText[entry.data.accent]]} />
 		</span>
-		<p class="mt-6 font-mono text-xs tracking-[0.2em] text-paper/50 uppercase">Organización comunitaria</p>
+		<p class="mt-6 font-mono text-xs tracking-[0.2em] text-paper/60 uppercase">Organización comunitaria</p>
 		<h1 class="mt-2 font-serif italic text-5xl sm:text-6xl">{entry.data.title}</h1>
-		<p class="mt-4 text-lg text-paper/70 max-w-xl">{entry.data.tagline}</p>
+		<p class="mt-4 text-lg text-paper/80 max-w-xl">{entry.data.tagline}</p>
 	</div>
 </section>
 
@@ -71,7 +86,7 @@ const accentProseHeadings: Record<string, string> = {
 
 	{entry.data.gallery && entry.data.gallery.length > 0 && (
 		<div class="mt-16">
-			<p class="font-mono text-xs tracking-[0.2em] text-rio uppercase">Cuaderno de campo</p>
+			<p class="font-mono text-xs tracking-[0.2em] text-campo uppercase">Cuaderno de campo</p>
 			<h2 class="mt-2 font-serif text-2xl text-ink">Momentos del grupo</h2>
 			<div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
 				{entry.data.gallery.map((foto) => (

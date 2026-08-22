@@ -4,8 +4,9 @@ tagline: "Representación de la comunidad afrodescendiente de la vereda."
 leaderName: "Sandra Liliana Montenegro"
 leaderRole: "Representante Legal"
 icon: "✊🏾"
-accent: "ember"
+accent: "campo"
 order: 5
+heroImage: "/images/galeria/5.jpeg"
 ---
 
 ## ¿Qué es el Consejo Comunitario Afroguacanal?
