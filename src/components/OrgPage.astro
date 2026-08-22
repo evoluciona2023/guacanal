@@ -13,7 +13,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 const otras = (await getCollection('organizaciones'))
-	.filter((org) => org.slug !== entry.slug)
+	.filter((org) => org.slug !== entry.slug && org.data.visible)
 	.sort((a, b) => a.data.order - b.data.order);
 
 const accentText: Record<string, string> = {

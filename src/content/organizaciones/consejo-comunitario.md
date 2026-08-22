@@ -7,6 +7,7 @@ icon: "✊🏾"
 accent: "campo"
 order: 5
 heroImage: "/images/galeria/5.jpeg"
+visible: false
 ---
 
 ## ¿Qué es el Consejo Comunitario Afroguacanal?

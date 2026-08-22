@@ -9,7 +9,7 @@ interface Props {
 
 const { title, description = 'Vereda Guacanal, El Cerrito - Valle del Cauca. Historia, comunidad y vida de campo.' } = Astro.props;
 
-const organizaciones = (await getCollection('organizaciones')).sort((a, b) => a.data.order - b.data.order);
+const organizaciones = (await getCollection('organizaciones', ({ data }) => data.visible)).sort((a, b) => a.data.order - b.data.order);
 const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 

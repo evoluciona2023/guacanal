@@ -1,9 +1,17 @@
 ---
+import { getCollection } from 'astro:content';
+
 interface Props {
 	defaultSubject?: string;
 }
 
 const { defaultSubject = 'General' } = Astro.props;
+
+const visibleOrgs = (await getCollection('organizaciones', ({ data }) => data.visible)).sort(
+	(a, b) => a.data.order - b.data.order,
+);
+const subjects = ['General', ...visibleOrgs.map((org) => org.data.title)];
+if (!subjects.includes(defaultSubject)) subjects.push(defaultSubject);
 ---
 
 <form
@@ -48,12 +56,9 @@ const { defaultSubject = 'General' } = Astro.props;
 			name="asunto"
 			class="w-full rounded-sm border border-ink/20 bg-white px-4 py-2.5 text-ink focus:border-ember focus:ring-1 focus:ring-ember outline-none"
 		>
-			<option selected={defaultSubject === 'General'}>General</option>
-			<option selected={defaultSubject === 'Junta de Acción Comunal'}>Junta de Acción Comunal</option>
-			<option selected={defaultSubject === 'Aproagua'}>Aproagua</option>
-			<option selected={defaultSubject === 'Mi Campo Emprende'}>Mi Campo Emprende</option>
-			<option selected={defaultSubject === 'Grupo de la Tercera Edad Añoranzas'}>Grupo de la Tercera Edad Añoranzas</option>
-			<option selected={defaultSubject === 'Consejo Comunitario Afroguacanal'}>Consejo Comunitario Afroguacanal</option>
+			{subjects.map((subject) => (
+				<option selected={defaultSubject === subject}>{subject}</option>
+			))}
 		</select>
 	</div>
 
