@@ -1,0 +1,50 @@
+---
+interface HistoryItem {
+	fecha: string;
+	titulo: string;
+	texto: string;
+}
+
+interface Props {
+	historia: HistoryItem[];
+	accent?: 'green' | 'navy' | 'purple';
+	openFirst?: boolean;
+}
+
+const { historia, accent = 'green', openFirst = true } = Astro.props;
+
+const border25: Record<string, string> = { green: 'border-green/25', navy: 'border-navy/25', purple: 'border-purple/25' };
+const borderOpen: Record<string, string> = { green: 'open:border-green/40', navy: 'open:border-navy/40', purple: 'open:border-purple/40' };
+const hoverBg: Record<string, string> = { green: 'hover:bg-green/[0.04]', navy: 'hover:bg-navy/[0.04]', purple: 'hover:bg-purple/[0.04]' };
+const dateText: Record<string, string> = { green: 'text-green/80', navy: 'text-navy/80', purple: 'text-purple/80' };
+const dotBg: Record<string, string> = { green: 'bg-green', navy: 'bg-navy', purple: 'bg-purple' };
+const chipBg: Record<string, string> = { green: 'bg-green/10 text-green', navy: 'bg-navy/10 text-navy', purple: 'bg-purple/10 text-purple' };
+const chipOpen: Record<string, string> = {
+	green: 'group-open:bg-green group-open:text-white',
+	navy: 'group-open:bg-navy group-open:text-white',
+	purple: 'group-open:bg-purple group-open:text-white',
+};
+---
+
+<div class:list={['relative border-l-2 pl-8 sm:pl-10 space-y-5', border25[accent]]}>
+	{historia.map((bloque, i) => (
+		<details
+			class:list={['group relative rounded-lg border border-ink/10 bg-white open:shadow-sm transition-colors', borderOpen[accent]]}
+			open={openFirst && i === 0}
+		>
+			<span class:list={['absolute -left-[2.95rem] sm:-left-[3.25rem] top-6 w-3.5 h-3.5 rounded-full ring-4 ring-paper', dotBg[accent]]}></span>
+			<summary class:list={['cursor-pointer list-none [&::-webkit-details-marker]:hidden flex items-center justify-between gap-3 px-5 py-4 rounded-lg transition-colors', hoverBg[accent]]}>
+				<span>
+					<span class:list={['block text-xs font-semibold tracking-[0.1em] uppercase', dateText[accent]]}>{bloque.fecha}</span>
+					<span class="mt-1 block font-display font-semibold text-lg sm:text-xl text-ink">{bloque.titulo}</span>
+				</span>
+				<span class:list={['shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-full transition-colors', chipBg[accent], chipOpen[accent]]}>
+					<svg class="w-4 h-4 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="none">
+						<path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</span>
+			</summary>
+			<p class="px-5 pb-5 text-ink/75 leading-relaxed">{bloque.texto}</p>
+		</details>
+	))}
+</div>

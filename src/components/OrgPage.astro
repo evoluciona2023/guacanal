@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import ContactForm from './ContactForm.astro';
 import OrgIcon from './OrgIcon.astro';
+import HistoryTimeline from './HistoryTimeline.astro';
 
 interface Props {
 	entry: CollectionEntry<'organizaciones'>;
@@ -41,6 +42,16 @@ const accentProseHeadings: Record<string, string> = {
 			<p class="font-display font-semibold text-xl text-ink">{entry.data.leaderName}</p>
 		</div>
 	</div>
+
+	{entry.data.historia && entry.data.historia.length > 0 && (
+		<div class="mb-16">
+			<p class:list={['text-xs font-semibold tracking-[0.15em] uppercase', accentText[entry.data.accent]]}>Reseña histórica</p>
+			<h2 class="mt-2 font-display font-bold text-2xl text-ink">Historia y logros</h2>
+			<div class="mt-8">
+				<HistoryTimeline historia={entry.data.historia} accent={entry.data.accent} />
+			</div>
+		</div>
+	)}
 
 	<article
 		class:list={[

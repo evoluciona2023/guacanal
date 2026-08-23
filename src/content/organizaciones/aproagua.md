@@ -7,6 +7,19 @@ icon: "🥑"
 accent: "green"
 banner: "/images/banners/Aproagua.png"
 order: 2
+historia:
+  - fecha: "2000–2002"
+    titulo: "Nace la asociatividad"
+    texto: "Aproagua nació como una iniciativa para fortalecer el trabajo de los agricultores de la vereda y promover el desarrollo del sector agropecuario mediante la organización comunitaria. En el año 2000 llegó a Guacanal la ingeniera agrónoma Elizabeth Aristizábal, quien impulsó la asociatividad entre los productores rurales; de ese proceso surgieron los primeros estatutos y la primera junta directiva, y la asociación quedó formalmente inscrita el 26 de junio de 2002."
+  - fecha: "2008–2010"
+    titulo: "Acompañamiento de VallenPaz"
+    texto: "Con el acompañamiento de la Fundación VallenPaz —liderada por el doctor Rodrigo Guerrero y su equipo—, se actualizaron los estatutos de la asociación en 2008, y el 4 de marzo de 2010 se realizó una nueva reforma estatutaria que actualizó su objeto social."
+  - fecha: "2011"
+    titulo: "Fondo Rotatorio"
+    texto: "Representantes de la Comunidad de Madrid apoyaron a Aproagua con 10 proyectos productivos de un millón de pesos cada uno, recursos con los que se creó un Fondo Rotatorio de préstamos para los asociados que continúa fortaleciéndose. VallenPaz también ejecutó obras de mejoramiento de vivienda para varias familias asociadas, incluida la construcción de cocinas y la adecuación de baños y duchas."
+  - fecha: "Hoy"
+    titulo: "Producción diversificada"
+    texto: "Con el paso de los años algunos asociados se han retirado y nuevos productores se han sumado, manteniendo vivo el compromiso de trabajar unidos por el desarrollo del campo. Donde antes se sembraba algodón, maíz, sorgo y soya, hoy conviven la caña de azúcar con cultivos diversificados impulsados por la asociación: aguacate, tomate, plátano, ají pimentón, cítricos y maracuyá. Varios de sus miembros han desarrollado biofábricas artesanales, donde elaboran sus propios insumos agrícolas gracias a capacitaciones de ingenieros agrónomos e instructores del SENA."
 ---
 
 ## ¿Qué es Aproagua?
@@ -18,14 +31,6 @@ La Asociación de Productores Agropecuarios del Guacanal (Aproagua) agrupa a los
 **Visión 2032:** ser una organización reconocida a nivel regional por su liderazgo en el desarrollo agropecuario, la ejecución de proyectos productivos, la gestión de alianzas estratégicas y la implementación de prácticas sostenibles e innovadoras que generen bienestar para sus asociados y sus comunidades.
 
 Es una entidad sin ánimo de lucro (NIT 815003930-5), registrada ante la Cámara de Comercio de Buga, con domicilio en El Cerrito, Valle del Cauca.
-
-## Historia y logros
-
-Aproagua nació como una iniciativa para fortalecer el trabajo de los agricultores de la vereda y promover el desarrollo del sector agropecuario mediante la organización comunitaria. En el año 2000 llegó a Guacanal la ingeniera agrónoma Elizabeth Aristizábal, quien impulsó la asociatividad entre los productores rurales; de ese proceso surgieron los primeros estatutos y la primera junta directiva, y la asociación quedó formalmente inscrita el 26 de junio de 2002.
-
-En 2008, con el acompañamiento de la Fundación VallenPaz —liderada por el doctor Rodrigo Guerrero y su equipo—, se actualizaron los estatutos de la asociación, y el 4 de marzo de 2010 se realizó una nueva reforma estatutaria que actualizó su objeto social. Hacia 2011, representantes de la Comunidad de Madrid apoyaron a Aproagua con 10 proyectos productivos de un millón de pesos cada uno, recursos con los que se creó un **Fondo Rotatorio** de préstamos para los asociados que continúa fortaleciéndose. VallenPaz también ejecutó obras de mejoramiento de vivienda para varias familias asociadas, incluida la construcción de cocinas y la adecuación de baños y duchas.
-
-Con el paso de los años algunos asociados se han retirado y nuevos productores se han sumado, manteniendo vivo el compromiso de trabajar unidos por el desarrollo del campo. Donde antes se sembraba algodón, maíz, sorgo y soya, hoy conviven la caña de azúcar con cultivos diversificados impulsados por la asociación: **aguacate, tomate, plátano, ají pimentón, cítricos y maracuyá**. Varios de sus miembros han desarrollado **biofábricas artesanales**, donde elaboran sus propios insumos agrícolas gracias a capacitaciones de ingenieros agrónomos e instructores del SENA, avanzando hacia una producción más limpia y autosuficiente.
 
 ## Junta directiva
 

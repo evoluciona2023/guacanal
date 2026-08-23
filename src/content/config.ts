@@ -15,6 +15,9 @@ const organizaciones = defineCollection({
 		gallery: z
 			.array(z.object({ src: z.string(), alt: z.string() }))
 			.optional(),
+		historia: z
+			.array(z.object({ fecha: z.string(), titulo: z.string(), texto: z.string() }))
+			.optional(),
 	}),
 });
 
