@@ -1,7 +1,7 @@
 ---
 title: "Grupo de la Tercera Edad Añoranzas"
 tagline: "Espacio de encuentro para los adultos mayores de Guacanal."
-leaderName: "Nohemy Ramírez Ordóñez"
+leaderName: "Alba Nidia Saavedra Cuero"
 leaderRole: "Coordinadora"
 icon: "🌻"
 accent: "purple"
@@ -48,8 +48,6 @@ Se legalizó ante el municipio de El Cerrito, lo que permitió gestionar el apoy
 - Próximo proyecto: un viaje a Cartagena
 
 ## Junta directiva
-
-*[PENDIENTE: confirmar quién ocupa la coordinación — la reseña histórica de la vereda registra a Nohemy Ramírez Ordóñez como Coordinadora; información más reciente indica a Alba Nidia Saavedra Cuero. Mientras se confirma, se listan ambos roles.]*
 
 - Coordinadora: Alba Nidia Saavedra Cuero
 - Vicecoordinadora: Nohemy Ramírez Ordóñez
