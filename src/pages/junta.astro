@@ -1,12 +1,37 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import OrgPage from '../components/OrgPage.astro';
 
 const entry = await getEntry('organizaciones', 'junta');
 if (!entry) throw new Error('Entrada "junta" no encontrada en la colección organizaciones');
+
+const comunicados = (await getCollection('comunicados', ({ data }) => data.org === 'junta')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const ultimo = comunicados[0];
+const formatDate = (date: Date) =>
+	new Intl.DateTimeFormat('es-CO', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(date);
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.tagline} accent={entry.data.accent}>
-	<OrgPage entry={entry} />
+	<OrgPage entry={entry}>
+		<a
+			slot="extra"
+			href="/junta/comunicaciones"
+			class="mb-16 flex items-center justify-between gap-4 rounded-lg border border-navy/20 bg-navy/5 px-5 py-4 hover:border-navy/40 hover:bg-navy/10 transition-colors"
+		>
+			<div>
+				<p class="text-xs font-semibold tracking-[0.1em] text-navy uppercase">📣 Comunicaciones</p>
+				{ultimo ? (
+					<p class="mt-1 font-display font-semibold text-ink">
+						{ultimo.data.title} <span class="font-sans font-normal text-ink/50 text-sm">· {formatDate(ultimo.data.date)}</span>
+					</p>
+				) : (
+					<p class="mt-1 font-display font-semibold text-ink">Ver noticias y comunicados de la Junta</p>
+				)}
+			</div>
+			<span class="shrink-0 text-navy font-medium text-sm">Ver todas →</span>
+		</a>
+	</OrgPage>
 </BaseLayout>

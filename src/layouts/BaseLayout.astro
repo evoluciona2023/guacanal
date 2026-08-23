@@ -63,7 +63,9 @@ const navLabels: Record<string, string> = {
 							href={`/${org.slug}`}
 							class:list={[
 								'pb-1 border-b-2 hover:text-green transition-colors whitespace-nowrap',
-								currentPath === `/${org.slug}` ? [accentText[org.data.accent], accentBorder[org.data.accent]] : 'border-transparent',
+								currentPath === `/${org.slug}` || currentPath.startsWith(`/${org.slug}/`)
+									? [accentText[org.data.accent], accentBorder[org.data.accent]]
+									: 'border-transparent',
 							]}
 						>
 							{navLabels[org.slug] ?? org.data.title}

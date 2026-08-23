@@ -21,4 +21,14 @@ const organizaciones = defineCollection({
 	}),
 });
 
-export const collections = { organizaciones };
+const comunicados = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		date: z.date(),
+		org: z.enum(['junta']),
+		autor: z.string().optional(),
+	}),
+});
+
+export const collections = { organizaciones, comunicados };

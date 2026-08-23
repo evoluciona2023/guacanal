@@ -43,6 +43,8 @@ const accentProseHeadings: Record<string, string> = {
 		</div>
 	</div>
 
+	<slot name="extra" />
+
 	{entry.data.historia && entry.data.historia.length > 0 && (
 		<div class="mb-16">
 			<p class:list={['text-xs font-semibold tracking-[0.15em] uppercase', accentText[entry.data.accent]]}>Reseña histórica</p>
