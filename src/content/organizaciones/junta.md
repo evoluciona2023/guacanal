@@ -7,21 +7,24 @@ icon: "🤝"
 accent: "navy"
 banner: "/images/banners/Junta.png"
 order: 1
+historia:
+  - fecha: "1961"
+    titulo: "Comité Pro-Construcción de la Escuela"
+    texto: "La tradición organizativa de Guacanal nace mucho antes de la JAC formal: en 1961, un comité de vecinos llamado \"Pro-Construcción de la Escuela de la Vereda\" gestionó la donación del lote donde hoy se levanta la Escuela Simón Bolívar, construida con el trabajo de la propia comunidad."
+  - fecha: "19 de mayo de 1972"
+    titulo: "Personería jurídica"
+    texto: "Ese espíritu se formalizó cuando la Gobernación reconoció la personería jurídica de la Junta de Acción Comunal de la Vereda de Guacanal (Resolución 2040), siendo Remigio Saavedra su primer presidente."
+  - fecha: "1982–1984"
+    titulo: "Energía y acueducto"
+    texto: "Desde entonces, la Junta ha liderado gestiones fundamentales para la vereda: la instalación del servicio de energía eléctrica en 1982 y del acueducto veredal en 1984."
+  - fecha: "Hoy"
+    titulo: "Sin sede propia"
+    texto: "Hoy en día la Junta no cuenta con una sede comunal propia: se reúne en la caseta ubicada en los predios de la Escuela Simón Bolívar, la cual la institución educativa también usa como comedor escolar. Gestionar un lote propio para una sede comunal es una de las prioridades actuales de la directiva."
 ---
 
 ## ¿Qué es la Junta de Acción Comunal?
 
 La Junta de Acción Comunal (JAC) es una asociación cívica sin ánimo de lucro que representa a la comunidad de Guacanal ante el municipio de El Cerrito, gestiona obras de infraestructura y acompaña las necesidades colectivas de la vereda, dentro del territorio delimitado por los ríos Zabaletas (norte), Cauca (occidente) y Amaime (sur), y el corregimiento de San Antonio (oriente).
-
-## Historia y logros
-
-La tradición organizativa de Guacanal nace mucho antes de la JAC formal: en 1961, un comité de vecinos llamado "Pro-Construcción de la Escuela de la Vereda" gestionó la donación del lote donde hoy se levanta la Escuela Simón Bolívar, construida con el trabajo de la propia comunidad.
-
-Ese espíritu se formalizó el **19 de mayo de 1972**, cuando la Gobernación reconoció la personería jurídica de la Junta de Acción Comunal de la Vereda de Guacanal (Resolución 2040), siendo **Remigio Saavedra** su primer presidente.
-
-Desde entonces, la Junta ha liderado gestiones fundamentales para la vereda: la instalación del servicio de energía eléctrica en **1982** y del acueducto veredal en **1984**.
-
-Hoy en día la Junta no cuenta con una sede comunal propia: se reúne en la caseta ubicada en los predios de la Escuela Simón Bolívar, la cual la institución educativa también usa como comedor escolar. Gestionar un lote propio para una sede comunal es una de las prioridades actuales de la directiva.
 
 ## Junta directiva
 
