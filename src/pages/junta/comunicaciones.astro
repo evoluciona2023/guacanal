@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { url } from '../../lib/base';
 
 const comunicados = (await getCollection('comunicados', ({ data }) => data.org === 'junta')).sort(
 	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -14,7 +15,7 @@ const formatDate = (date: Date) =>
 
 <BaseLayout title="Comunicaciones" description="Noticias y comunicados de la Junta de Acción Comunal de Guacanal." accent="navy">
 	<section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-		<a href="/junta" class="inline-flex items-center gap-2 text-sm text-ink/60 hover:text-navy transition-colors">
+		<a href={url('/junta')} class="inline-flex items-center gap-2 text-sm text-ink/60 hover:text-navy transition-colors">
 			← Volver a la Junta
 		</a>
 

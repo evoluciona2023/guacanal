@@ -4,6 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 import ContactForm from './ContactForm.astro';
 import OrgIcon from './OrgIcon.astro';
 import HistoryTimeline from './HistoryTimeline.astro';
+import { url } from '../lib/base';
 
 interface Props {
 	entry: CollectionEntry<'organizaciones'>;
@@ -28,7 +29,7 @@ const accentProseHeadings: Record<string, string> = {
 <section>
 	{entry.data.banner && (
 		<img
-			src={entry.data.banner}
+			src={url(entry.data.banner)}
 			alt={`${entry.data.title} — ${entry.data.tagline}`}
 			class="w-full h-auto sm:h-36 md:h-44 sm:object-cover sm:object-left"
 		/>
@@ -72,7 +73,7 @@ const accentProseHeadings: Record<string, string> = {
 			<div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
 				{entry.data.gallery.map((foto) => (
 					<div class="aspect-square overflow-hidden rounded-md border border-ink/10">
-						<img src={foto.src} alt={foto.alt} loading="lazy" class="h-full w-full object-cover" />
+						<img src={url(foto.src)} alt={foto.alt} loading="lazy" class="h-full w-full object-cover" />
 					</div>
 				))}
 			</div>
@@ -84,14 +85,14 @@ const accentProseHeadings: Record<string, string> = {
 		<div class="mt-4 flex flex-wrap gap-3">
 			{otras.map((org) => (
 				<a
-					href={`/${org.slug}`}
+					href={url(`/${org.slug}`)}
 					class="inline-flex items-center gap-2 rounded-md border border-ink/15 bg-white px-4 py-2 text-sm font-medium hover:border-ink transition-colors"
 				>
 					<OrgIcon slug={org.slug} class="w-4 h-4" />{org.data.title}
 				</a>
 			))}
 			<a
-				href="/"
+				href={url('/')}
 				class="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm text-ink/60 hover:text-ink transition-colors"
 			>
 				← Volver al inicio

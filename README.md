@@ -6,7 +6,7 @@ Sitio web de la vereda Guacanal, corregimiento de San Antonio, municipio de El C
 
 - [Astro](https://astro.build) — generador de sitios estáticos
 - [Tailwind CSS](https://tailwindcss.com) — estilos
-- [Netlify](https://netlify.com) — hosting y formulario de contacto (Netlify Forms)
+- [GitHub Pages](https://pages.github.com) — hosting, vía GitHub Actions (`.github/workflows/deploy.yml`)
 
 ## Estructura
 
@@ -32,4 +32,8 @@ Los bloques de texto marcados como `[PENDIENTE]` en `src/content/organizaciones/
 
 ## Despliegue
 
-Conectado a Netlify (`netlify.toml`): cada `git push` a `main` construye y publica el sitio automáticamente.
+El sitio se publica en GitHub Pages: `https://evoluciona2023.github.io/guacanal/`. Cada `git push` a `main` dispara el workflow de GitHub Actions (`.github/workflows/deploy.yml`), que construye el sitio y lo publica automáticamente — sin límite de minutos de build para repos públicos.
+
+Como GitHub Pages sirve el sitio desde la subruta `/guacanal` (no la raíz), el proyecto está configurado con `base: '/guacanal'` en `astro.config.mjs`, y todas las rutas internas (enlaces, imágenes) pasan por el helper `src/lib/base.ts` para incluir ese prefijo automáticamente.
+
+**Nota:** el formulario de contacto usaba Netlify Forms, que no funciona fuera de Netlify. Sigue marcado con los atributos `data-netlify`, pero necesita un servicio de formularios distinto (p. ej. Formspree) para volver a recibir mensajes.

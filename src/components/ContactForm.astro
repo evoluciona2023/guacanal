@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { url } from '../lib/base';
 
 interface Props {
 	defaultSubject?: string;
@@ -32,7 +33,7 @@ const fieldClass = `w-full rounded-md border border-ink/20 bg-white px-4 py-2.5 
 	method="POST"
 	data-netlify="true"
 	netlify-honeypot="empresa"
-	action="/gracias"
+	action={url('/gracias')}
 	class="grid gap-4 max-w-xl"
 >
 	<input type="hidden" name="form-name" value="contacto" />

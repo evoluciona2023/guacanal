@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery.astro';
 import MapEmbed from '../components/MapEmbed.astro';
 import ContactForm from '../components/ContactForm.astro';
 import HistoryTimeline from '../components/HistoryTimeline.astro';
+import { url } from '../lib/base';
 
 const organizaciones = (await getCollection('organizaciones', ({ data }) => data.visible)).sort((a, b) => a.data.order - b.data.order);
 
@@ -40,7 +41,7 @@ const historia = [
 <BaseLayout title="Inicio" accent="green">
 	<section id="inicio">
 		<img
-			src="/images/banners/principal.png"
+			src={url('/images/banners/principal.png')}
 			alt="Guacanal, Juntos por nuestra vereda — Trabajamos unidos por el desarrollo, el bienestar y el futuro de nuestra gente"
 			class="w-full h-auto sm:h-36 md:h-44 sm:object-cover sm:object-left"
 		/>

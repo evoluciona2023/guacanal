@@ -1,4 +1,6 @@
 ---
+import { url } from '../lib/base';
+
 const fotos = [
 	{ src: '/images/galeria/2.jpeg', alt: 'Atardecer sobre las montañas de Guacanal, con cultivos en primer plano' },
 	{ src: '/images/galeria/11.jpeg', alt: 'Vista aérea de la vereda Guacanal, con las montañas de fondo' },
@@ -22,7 +24,7 @@ const fotos = [
 			data-index={i}
 			aria-label={`Ampliar foto: ${foto.alt}`}
 		>
-			<img src={foto.src} alt={foto.alt} loading="lazy" class="w-full h-auto" />
+			<img src={url(foto.src)} alt={foto.alt} loading="lazy" class="w-full h-auto" />
 			<span class="absolute inset-0 bg-ink/0 group-hover:bg-ink/10 transition-colors"></span>
 			<span class="absolute bottom-2 right-2 h-8 w-8 rounded-full bg-white/90 text-ink flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
 				<svg class="w-4 h-4" viewBox="0 0 20 20" fill="none"><path d="M8 3H3v5M12 3h5v5M3 12v5h5M17 12v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
