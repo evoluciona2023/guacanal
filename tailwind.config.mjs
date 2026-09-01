@@ -6,15 +6,17 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				paper: '#F3F1EC',
-				ink: '#262420',
-				green: '#2E7D32',
+				// "Sophisticated Wilderness" preview palette
+				paper: '#FBF9F8',
+				ink: '#1B1C1C',
+				green: '#2D4D44',
+				gold: '#775A19',
 				navy: '#12305C',
 				purple: '#7B5EA7',
 			},
 			fontFamily: {
-				display: ['Poppins', 'system-ui', 'sans-serif'],
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				display: ['Newsreader', 'Georgia', 'serif'],
+				sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
 			},
 		},
 	},
